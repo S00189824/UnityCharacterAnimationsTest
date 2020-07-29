@@ -62,7 +62,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <None Include="Assets\StoreAssets\Enviromental Assets\BrokenVector\LowPolyTreePack\README.txt" />
+    <None Include="Assets\StoreAssets\Buildings\Baker House\Readme.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

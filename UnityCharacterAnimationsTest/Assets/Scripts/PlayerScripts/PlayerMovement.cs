@@ -2,49 +2,79 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public enum PlayerState
-{
-    OnGroundState,
-    WallJumpState
-};
-
 public class PlayerMovement : MonoBehaviour
 {
-    CharacterController controller;
-    Vector3 Velocity;
+    CharacterController playerController;
+
+    Vector3 velocity;
+    Vector3 lastVelocity;
+
     float speed;
     public float baseSpeed;
-    public float BaseJumpHeight;
-    float JumpHeight;
-    public bool OnGround;
-    public Transform Ground;
-    public float FallSpeed;
-    public float GroundDistance;
-    public LayerMask GroundMask;
-    PlayerState CurrentState;
+
+    float jumpHeight;
+    public float baseJumpHeight;
+    float jumpVelocity;
+
+    float fallSpeed;
+    public float baseFallSpeed;
+    public float WallJumpAngle;
 
     void Start()
     {
-        
+        playerController = GetComponent<CharacterController>();
+
+        speed = baseSpeed;
+        fallSpeed = baseFallSpeed;
+        jumpHeight = baseJumpHeight;
     }
 
-    public virtual void Update()
+    void Update()
     {
-        OnGround = Physics.CheckSphere(Ground.position, GroundDistance, GroundMask);
-        OnGroundMovement();
+        velocity = Vector3.zero;
+        velocity = (transform.right * Input.GetAxis("Horizontal") + transform.forward * Input.GetAxis("Vertical")) * speed;
+
+        if (playerController.isGrounded)
+            Jump();
+        else
+            Fall();
+
+        Move();
     }
 
-
-    void OnGroundMovement()
+    void Move()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        velocity.y = 0;
+        velocity.y = jumpVelocity;
 
-        Vector3 move = transform.right * -h + transform.forward * v;
-        controller.Move(move * speed * Time.deltaTime);
+        playerController.Move(velocity * Time.deltaTime);
+        lastVelocity = velocity;
+    }
 
-        Velocity.y += FallSpeed * Time.deltaTime;
-        controller.Move(Velocity * Time.deltaTime);
+    void Jump()
+    {
+        jumpVelocity = -1;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+            jumpVelocity = jumpHeight;
+    }
+
+    void Fall()
+    {
+        jumpVelocity -= fallSpeed * Time.deltaTime;
+        velocity = lastVelocity;
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (!playerController.isGrounded && hit.normal.y < 0.1f)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Debug.DrawRay(hit.point, hit.normal, Color.red, 5);
+                jumpVelocity = jumpHeight;
+                velocity = (hit.normal + new Vector3(0, WallJumpAngle, 0)) * speed;
+            }
+        }
     }
 }

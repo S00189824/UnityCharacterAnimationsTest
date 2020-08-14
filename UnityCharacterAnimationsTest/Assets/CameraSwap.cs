@@ -28,7 +28,7 @@ public class CameraSwap : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            Instantiate()
+            
             CameraFollow.enabled = true;
             CameraController.enabled = false;
         }

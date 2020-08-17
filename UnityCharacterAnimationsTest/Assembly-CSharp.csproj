@@ -65,7 +65,9 @@
     <Compile Include="Assets\Scripts\Camera Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Camera Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Camera Scripts\FrameRateEnforcer.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\BaseLayerAniCon.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\TutorialExample.cs" />
     <None Include="Assets\StoreAssets\Enviromental Assets\BrokenVector\LowPolyTreePack\README.txt" />
     <None Include="Assets\Ludiq\Ludiq.Core\DotNetDocumentation\System.Web.Extensions.Design.xml" />
     <None Include="Assets\Ludiq\Ludiq.Core\DotNetDocumentation\System.Data.Entity.xml" />

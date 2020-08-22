@@ -9,10 +9,12 @@ public class CameraController : MonoBehaviour
     public Transform player;
     float xRotation = 0f;
     float yRotation = 0f;
+    Vector3 CameraOffset;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        CameraOffset = transform.position - player.position;
     }
 
     void Update()
@@ -30,6 +32,8 @@ public class CameraController : MonoBehaviour
 
         //making the camera rotate with the previous variables
         cameraAxis.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
-        player.Rotate(Vector3.up * mouseX);
+        //player.Rotate(Vector3.up * mouseX);
+
+        
     }
 }

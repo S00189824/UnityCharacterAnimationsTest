@@ -51,11 +51,6 @@ public class PlayerMovement : MonoBehaviour
 
         playerController.Move(velocity * Time.deltaTime);
         lastVelocity = velocity;
-
-        //Vector3 CamForward = cameraController.transform.forward;
-        //Vector3 camRight = cameraController.transform.right;
-
-        //Vector3 TargetLocation = velocity.z * cameraController.transform.forward;
     }
 
     void Jump()

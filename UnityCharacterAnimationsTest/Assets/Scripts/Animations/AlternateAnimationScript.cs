@@ -5,17 +5,21 @@ using UnityEngine;
 public class AlternateAnimationScript : MonoBehaviour
 {
     public Animator animator;
+    PlayerMovement player;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        animator.SetFloat("y", Input.GetAxis("Vertical"));
-        animator.SetFloat("x", Input.GetAxis("Horizontal"));
+        if(player)
+
+        animator.SetFloat("Speed", player.speed);
+        
     }
 }

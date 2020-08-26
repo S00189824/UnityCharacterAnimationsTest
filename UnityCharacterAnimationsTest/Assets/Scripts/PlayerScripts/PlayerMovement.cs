@@ -6,11 +6,12 @@ public class PlayerMovement : MonoBehaviour
 {
     CharacterController playerController;
 
-    Vector3 velocity;
+    public Vector3 velocity;
     Vector3 lastVelocity;
 
-    float speed;
+    public float speed;
     public float baseSpeed;
+    public float SprintSpeed;
 
     float jumpHeight;
     public float baseJumpHeight;
@@ -24,22 +25,32 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        speed = 0;
+
         playerController = GetComponent<CharacterController>();
 
-        speed = baseSpeed;
+        
         fallSpeed = baseFallSpeed;
         jumpHeight = baseJumpHeight;
+
+
     }
 
     void Update()
     {
+
+        SetSpeed();
+
         velocity = Vector3.zero;
         velocity = (-cameraController.transform.right * Input.GetAxis("Horizontal") + -cameraController.transform.forward * Input.GetAxis("Vertical")) * speed;
-
+        
         if (playerController.isGrounded)
             Jump();
         else
             Fall();
+
+        Debug.Log(speed);
+        
 
         Move();
     }
@@ -66,6 +77,17 @@ public class PlayerMovement : MonoBehaviour
         jumpVelocity -= fallSpeed * Time.deltaTime;
         velocity = lastVelocity;
     }
+
+    void SetSpeed()
+    {
+        if (Input.GetKey(KeyCode.LeftShift) && (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0))
+            speed = SprintSpeed;
+        else if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+            speed = baseSpeed;
+        else
+            speed = 0;
+    }
+
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {

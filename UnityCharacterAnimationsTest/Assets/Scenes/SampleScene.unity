@@ -989,7 +989,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16868
+  m_Name: pb_Mesh16900
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1242,7 +1242,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16596
+  m_Name: pb_Mesh16626
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1498,7 +1498,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16698
+  m_Name: pb_Mesh16728
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2634,7 +2634,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16788
+  m_Name: pb_Mesh16818
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3378,7 +3378,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16618
+  m_Name: pb_Mesh16648
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3562,7 +3562,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0
@@ -4305,7 +4305,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16658
+  m_Name: pb_Mesh16688
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4474,7 +4474,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16896
+  m_Name: pb_Mesh16928
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4786,6 +4786,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4199342702704837101, guid: d0fb10817ff27484cbeb4b1f804cf117,
+        type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4199342702704837101, guid: d0fb10817ff27484cbeb4b1f804cf117,
+        type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: -4199342702704837101, guid: d0fb10817ff27484cbeb4b1f804cf117,
+        type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4199342702704837101, guid: d0fb10817ff27484cbeb4b1f804cf117,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: -4199342702704837101, guid: d0fb10817ff27484cbeb4b1f804cf117,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.007
+      objectReference: {fileID: 0}
+    - target: {fileID: -4199342702704837101, guid: d0fb10817ff27484cbeb4b1f804cf117,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.003
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: d0fb10817ff27484cbeb4b1f804cf117,
         type: 3}
       propertyPath: m_Name
@@ -4829,10 +4859,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 715f25cffa7a90b41bec82f4b0e6919a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpeed: 0
-  baseJumpHeight: 0
-  baseFallSpeed: 0
-  WallJumpAngle: 0
+  velocity: {x: 0, y: 0, z: 0}
+  speed: 0
+  baseSpeed: 5
+  SprintSpeed: 10
+  baseJumpHeight: 18
+  baseFallSpeed: 15
+  WallJumpAngle: 15
   cameraController: {fileID: 1852817034}
 --- !u!4 &1310274479
 Transform:
@@ -5299,7 +5332,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 715f25cffa7a90b41bec82f4b0e6919a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  speed: 0
   baseSpeed: 10
+  SprintSpeed: 0
   baseJumpHeight: 18
   baseFallSpeed: 15
   WallJumpAngle: 15
@@ -5706,7 +5742,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705822028}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1705822032
 Camera:
   m_ObjectHideFlags: 0

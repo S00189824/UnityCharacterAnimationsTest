@@ -43,13 +43,17 @@ public class PlayerMovement : MonoBehaviour
 
         velocity = Vector3.zero;
         velocity = (-cameraController.transform.right * Input.GetAxis("Horizontal") + -cameraController.transform.forward * Input.GetAxis("Vertical")) * speed;
+        //if (velocity.z != 0)
+        //    transform.forward = cameraController.transform.forward;
         
+
+            print(cameraController.transform.forward);
         if (playerController.isGrounded)
             Jump();
         else
             Fall();
 
-        Debug.Log(speed);
+        //Debug.Log(speed);
         
 
         Move();

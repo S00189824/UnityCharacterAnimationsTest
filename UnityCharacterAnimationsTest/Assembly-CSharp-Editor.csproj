@@ -62,7 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Install Bolt\Editor\InstallBoltMenuItem.cs" />
+    <Compile Include="Assets\unity-chan!\Unity-chan! Model\Editor\CreateLocatorHere.cs" />
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
@@ -312,41 +312,20 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="YamlDotNet">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/YamlDotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="Ludiq.Graphs.Editor">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Ludiq.Graphs.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Ludiq.Core.Runtime">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Ludiq.Core.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Ludiq.Graphs.Runtime">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Ludiq.Graphs.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Bolt.Core.Runtime">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Bolt.Core.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Ionic.Zip">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Ionic.Zip.dll</HintPath>
-    </Reference>
-    <Reference Include="Bolt.Flow.Runtime">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Bolt.Flow.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Ludiq.Platforms">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Ludiq.Platforms.dll</HintPath>
-    </Reference>
-    <Reference Include="MiscUtil">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/MiscUtil.dll</HintPath>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Bolt.Core.Editor">
       <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Bolt.Core.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Ludiq.Core.Editor">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Ludiq.Core.Editor.dll</HintPath>
+    <Reference Include="Bolt.Core.Runtime">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Bolt.Core.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Antlr3.Runtime">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Antlr3.Runtime.dll</HintPath>
+    <Reference Include="Bolt.Flow.Editor">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Bolt.Flow.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Bolt.Flow.Runtime">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Bolt.Flow.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Bolt.State.Editor">
       <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Bolt.State.Editor.dll</HintPath>
@@ -354,8 +333,29 @@
     <Reference Include="Bolt.State.Runtime">
       <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Bolt.State.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Bolt.Flow.Editor">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Bolt.Flow.Editor.dll</HintPath>
+    <Reference Include="Ionic.Zip">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Ludiq.Core.Editor">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Ludiq.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Ludiq.Core.Runtime">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Ludiq.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Ludiq.Graphs.Editor">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Ludiq.Graphs.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Ludiq.Graphs.Runtime">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Ludiq.Graphs.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Ludiq.Platforms">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Ludiq.Platforms.dll</HintPath>
+    </Reference>
+    <Reference Include="MiscUtil">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/MiscUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="YamlDotNet">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/YamlDotNet.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>

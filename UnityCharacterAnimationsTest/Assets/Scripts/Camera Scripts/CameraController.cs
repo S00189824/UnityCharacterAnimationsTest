@@ -7,8 +7,8 @@ public class CameraController : MonoBehaviour
     public float mouseSensitivity = 150f;
     public Transform cameraAxis;
     public Transform player;
-    float xRotation = 0f;
-    float yRotation = 0f;
+    public float xRotation = 0f;
+    public float yRotation = 0f;
     Vector3 CameraOffset;
 
     void Start()
@@ -32,8 +32,8 @@ public class CameraController : MonoBehaviour
 
         //making the camera rotate with the previous variables
         cameraAxis.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
-        //player.Rotate(Vector3.up * mouseX);
 
+        //Debug.Log(cameraAxis.transform..y);
         
     }
 }

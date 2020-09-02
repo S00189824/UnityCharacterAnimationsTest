@@ -20,7 +20,9 @@ public class PlayerMovement : MonoBehaviour
     float fallSpeed;
     public float baseFallSpeed;
     public float WallJumpAngle;
+    public Transform CameraAxis;
 
+    AlternateAnimationScript animationScript;
     public CameraController cameraController;
 
     void Start()
@@ -38,25 +40,30 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        
 
         SetSpeed();
 
         velocity = Vector3.zero;
         velocity = (-cameraController.transform.right * Input.GetAxis("Horizontal") + -cameraController.transform.forward * Input.GetAxis("Vertical")) * speed;
-        //if (velocity.z != 0)
-        //    transform.forward = cameraController.transform.forward;
-        
+        if (velocity.z != 0)
+        {
+            playerController.transform.rotation = Quaternion.Euler(0,cameraController.yRotation,0);
+        }
+            
 
-            print(cameraController.transform.forward);
+
+
         if (playerController.isGrounded)
             Jump();
         else
             Fall();
 
         //Debug.Log(speed);
-        
 
+        
         Move();
+        
     }
 
     void Move()
@@ -91,6 +98,8 @@ public class PlayerMovement : MonoBehaviour
         else
             speed = 0;
     }
+
+    
 
 
     private void OnControllerColliderHit(ControllerColliderHit hit)

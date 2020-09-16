@@ -28,7 +28,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -37,7 +37,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -62,7 +62,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\unity-chan!\Unity-chan! Model\Editor\CreateLocatorHere.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Avatar\Editor\MagicaAvatarGizmoDrawer.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Avatar\Editor\MagicaAvatarInspector.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Avatar\Editor\MagicaAvatarPartsInspector.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Cloth\BoneCloth\Editor\MagicaBoneClothGizmoDrawer.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Cloth\BoneCloth\Editor\MagicaBoneClothInspector.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Cloth\BoneSpring\Editor\MagicaBoneSpringGizmoDrawer.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Cloth\BoneSpring\Editor\MagicaBoneSpringInspector.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Cloth\Common\Editor\ClothEditor.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Cloth\Common\Editor\ClothGizmoDrawer.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Cloth\MeshCloth\Editor\MagicaMeshClothGizmoDrawer.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Cloth\MeshCloth\Editor\MagicaMeshClothInspector.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Cloth\MeshSpring\Editor\MagicaMeshSpringGizmoDrawer.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Cloth\MeshSpring\Editor\MagicaMeshSpringInspector.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Deformer\Common\Editor\DeformerGizmoDrawer.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Deformer\Component\Editor\MagicaRenderDeformerGizmoDrawer.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Deformer\Component\Editor\MagicaRenderDeformerInspector.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Deformer\Component\Editor\MagicaVirtualDeformerGizmoDrawer.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Deformer\Component\Editor\MagicaVirtualDeformerInspector.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\EditorExtension\About\Editor\AboutMenu.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\EditorExtension\HierarchyIcon\Editor\DrawClothIconInHierarchy.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\EditorExtension\MenuItem\Editor\MenuItemScript.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\EditorExtension\Monitor\Editor\ClothMonitorAccess.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\EditorExtension\Monitor\Editor\ClothMonitorMenu.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\EditorExtension\Monitor\Editor\ClothMonitorUI.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Physics\Manager\Editor\MagicaPhysicsManagerInspector.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Physics\ParticleComponent\Editor\MagicaCapsuleColliderGizmoDrawer.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Physics\ParticleComponent\Editor\MagicaPlaneColliderGizmoDrawer.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Physics\ParticleComponent\Editor\MagicaSphereColliderGizmoDrawer.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Physics\WindComponent\Editor\MagicaDirectionalWindGizmoDrawer.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Utility\CustomEditor\Editor\CustomReorderableList.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Utility\CustomEditor\Editor\EditorInspectorUtility.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Utility\CustomEditor\Editor\EditorPresetUtility.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Utility\PointSelector\Editor\PointSelector.cs" />
+    <Compile Include="Assets\MagicaCloth\Core\Utility\ShareData\Editor\ShareDataPrefabExtension.cs" />
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
@@ -72,6 +105,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.ProGrids">
       <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
     </Reference>
@@ -80,6 +116,18 @@
     </Reference>
     <Reference Include="Unity.ProBuilder">
       <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Jobs">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Jobs.Editor">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/ScriptAssemblies/Unity.Jobs.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Editor">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.Editor">
       <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
@@ -105,8 +153,14 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
       <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
@@ -313,49 +367,58 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Antlr3.Runtime">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Antlr3.Runtime.dll</HintPath>
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Bolt/Ludiq/Assemblies/Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Bolt.Core.Editor">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Bolt.Core.Editor.dll</HintPath>
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Bolt/Ludiq/Assemblies/Bolt.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Bolt.Core.Runtime">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Bolt.Core.Runtime.dll</HintPath>
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Bolt/Ludiq/Assemblies/Bolt.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Bolt.Flow.Editor">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Bolt.Flow.Editor.dll</HintPath>
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Bolt/Ludiq/Assemblies/Bolt.Flow.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Bolt.Flow.Runtime">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Bolt.Flow.Runtime.dll</HintPath>
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Bolt/Ludiq/Assemblies/Bolt.Flow.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Bolt.State.Editor">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Bolt.State.Editor.dll</HintPath>
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Bolt/Ludiq/Assemblies/Bolt.State.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Bolt.State.Runtime">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Bolt.State.Runtime.dll</HintPath>
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Bolt/Ludiq/Assemblies/Bolt.State.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Ionic.Zip">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Ionic.Zip.dll</HintPath>
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Bolt/Ludiq/Assemblies/Ionic.Zip.dll</HintPath>
     </Reference>
     <Reference Include="Ludiq.Core.Editor">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Ludiq.Core.Editor.dll</HintPath>
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Bolt/Ludiq/Assemblies/Ludiq.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Ludiq.Core.Runtime">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Ludiq.Core.Runtime.dll</HintPath>
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Bolt/Ludiq/Assemblies/Ludiq.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Ludiq.Graphs.Editor">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Ludiq.Graphs.Editor.dll</HintPath>
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Bolt/Ludiq/Assemblies/Ludiq.Graphs.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Ludiq.Graphs.Runtime">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Ludiq.Graphs.Runtime.dll</HintPath>
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Bolt/Ludiq/Assemblies/Ludiq.Graphs.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Ludiq.Platforms">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/Ludiq.Platforms.dll</HintPath>
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Bolt/Ludiq/Assemblies/Ludiq.Platforms.dll</HintPath>
     </Reference>
     <Reference Include="MiscUtil">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/MiscUtil.dll</HintPath>
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Bolt/Ludiq/Assemblies/MiscUtil.dll</HintPath>
     </Reference>
     <Reference Include="YamlDotNet">
-      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Ludiq/Assemblies/YamlDotNet.dll</HintPath>
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Assets/Bolt/Ludiq/Assemblies/YamlDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/PackageCache/com.unity.burst@1.3.5/Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/PackageCache/com.unity.collections@0.8.0-preview.5/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0-preview/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/David/Documents/Github/UnityCharacterAnimationsTest/UnityCharacterAnimationsTest/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
